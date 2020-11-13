@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/text_view"
+        android:layout_width="229dp"
+        android:layout_height="69dp"
+        android:layout_margin="20dp"
+        android:text="dddddddddddddddddddddddddddddddddddddddddd"
+        android:textColor="#ff0000"
+        android:textSize="25sp"
+        android:singleLine="true"
+        android:ellipsize="start"
+        />
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="229dp"
+        android:layout_height="69dp"
+        android:layout_margin="20dp"
+        android:text="测试"
+        android:textColor="#ff0000"
+        android:textSize="25sp"
+        android:drawableRight="@drawable/ic_launcher_background"
+        android:drawablePadding="10dp"
+        />
+
+    <TextView
+        android:id="@+id/tv3"
+        android:layout_width="229dp"
+        android:layout_height="69dp"
+        android:layout_margin="20dp"
+        android:text="测试下划线"
+        android:textColor="#ff0000"
+        android:textSize="25sp"
+        />
+
+    <TextView
+        android:id="@+id/tv4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:clickable="true"
+        android:focusableInTouchMode="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:text="测试跑马灯测试跑马灯测试跑马灯测试跑马灯测试跑马灯测试跑马灯测试跑马灯测试跑马灯"
+        android:textColor="#ff0000"
+        android:textSize="25sp"/>
+</LinearLayout>

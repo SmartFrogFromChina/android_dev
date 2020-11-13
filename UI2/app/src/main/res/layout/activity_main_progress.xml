@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@android:style/Widget.ProgressBar"/>
+
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@android:style/Widget.ProgressBar.Inverse"/>
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@android:style/Widget.ProgressBar.Large"/>
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@android:style/Widget.ProgressBar.Large.Inverse"/>
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@android:style/Widget.ProgressBar.Small"/>
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@android:style/Widget.ProgressBar.Small.Inverse"/>
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@android:style/Widget.Holo.Light.ProgressBar.Large.Inverse"
+        android:padding="10dp"/>
+
+    <ProgressBar
+        android:id="@+id/pb_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@android:style/Widget.ProgressBar.Horizontal"/>
+
+
+    <Button
+        android:id="@+id/btn_progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="模拟进度"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="下面这个是一张旋转的图片"
+        android:gravity="center"
+        android:layout_marginTop="20dp"/>
+    <ProgressBar
+        android:id="@+id/pb_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminateDrawable="@drawable/bg_progress_bar"/>
+
+    <ProgressBar
+        android:id="@+id/pb_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/my_progress_bar"/>
+
+    <Button
+        android:id="@+id/btn_progress_dialog1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ProgressDialog1"
+        android:textAllCaps="false"/>
+    <Button
+        android:id="@+id/btn_progress_dialog2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ProgressDialog2"
+        android:textAllCaps="false"/>
+
+</LinearLayout>

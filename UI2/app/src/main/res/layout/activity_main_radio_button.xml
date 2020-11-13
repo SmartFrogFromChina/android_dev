@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivityRadioButton">
+
+    <RadioGroup
+        android:id="@+id/rg_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp">>
+        <RadioButton
+            android:id="@+id/sex_f"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="男"
+            android:checked="true"
+            />
+        <RadioButton
+            android:id="@+id/sex_m"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="女"
+
+            />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/rg_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/rg_1"
+        android:layout_marginTop="30dp">
+
+        <RadioButton
+            android:id="@+id/water"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:text="水"
+            android:checked="true"
+            android:button="@null"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/radio_button_backgroud"
+            />
+        <RadioButton
+            android:id="@+id/fire"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:text="火"
+            android:gravity="center"
+            android:button="@null"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/radio_button_backgroud"
+            />
+    </RadioGroup>
+
+</RelativeLayout>
