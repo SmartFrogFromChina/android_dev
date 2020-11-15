@@ -4,13 +4,13 @@
     android:layout_height="match_parent">
 
     <EditText
-        android:id="@+id/et_username"
+        android:id="@+id/et_sign_up_nickname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="15sp"
         android:maxLines="1"
-        android:hint="用户名"
-        android:layout_marginTop="100dp"
+        android:hint="昵称"
+        android:layout_marginTop="50dp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:drawableLeft="@drawable/username"
@@ -18,49 +18,44 @@
         />
 
     <EditText
-        android:id="@+id/et_password"
+        android:id="@+id/et_sign_up_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:maxLines="1"
+        android:hint="用户名"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:drawableLeft="@drawable/username"
+        android:drawablePadding="10dp"
+        android:layout_below="@id/et_sign_up_nickname"
+        />
+
+    <EditText
+        android:id="@+id/et_sign_up_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="15sp"
         android:maxLines="1"
         android:hint="密码"
         android:inputType="textPassword"
-        android:layout_below="@id/et_username"
+        android:layout_below="@id/et_sign_up_username"
         android:layout_marginTop="20dp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:drawableLeft="@drawable/password"
         android:drawablePadding="10dp"
         />
-    <RelativeLayout
-        android:id="@+id/rl_no_acount"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:layout_below="@id/et_password"
-        android:gravity="bottom"
-       >
-        <TextView
-            android:id="@+id/tv_no_acount"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="还没有账号"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            />
-
-    </RelativeLayout>
-
-
-
     <Button
-        android:id="@+id/btn_login"
+        android:id="@+id/btn_sign_up"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
         android:background="@drawable/btn_press"
-        android:text="登录"
+        android:text="注册"
         android:textSize="20sp"
-        android:layout_below="@id/rl_no_acount"/>
+        android:layout_below="@id/et_sign_up_password"/>
 
 
 </RelativeLayout>

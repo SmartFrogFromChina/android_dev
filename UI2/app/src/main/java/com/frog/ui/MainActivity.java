@@ -20,10 +20,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
-
-
         mBtnUserInterface = findViewById(R.id.btn_user_interface);
         mBtnUserInterface.setOnClickListener(new View.OnClickListener() {
             @Override

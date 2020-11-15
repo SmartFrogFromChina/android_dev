@@ -20,17 +20,24 @@ public class MainActivityWelcome extends AppCompatActivity {
         setContentView(R.layout.activity_main_welcome);
 
         Timer timer = new Timer();
-        timer.schedule(timertask,3000);
+        timer.schedule(timertask,2000);
 
         //第一：默认初始化
-       // Bmob.initialize(this, "13b51c4d8260c30d68666900a7b55c50");
+       Bmob.initialize(this, "13b51c4d8260c30d68666900a7b55c50");
 
     }
 
     TimerTask timertask = new TimerTask() {
         @Override
         public void run() {
-               startActivity(new Intent(MainActivityWelcome.this, MainActivity.class));
+            BmobUser bmobUser = BmobUser.getCurrentUser(BmobUser.class);
+            if(bmobUser == null)
+            {
+                startActivity(new Intent(MainActivityWelcome.this, MainActivityEditText.class));
+            }else{
+                startActivity(new Intent(MainActivityWelcome.this, MainActivity.class));
+            }
+
         }
     };
 }
