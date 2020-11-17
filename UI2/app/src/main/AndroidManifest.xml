@@ -18,13 +18,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivitySignUp"></activity>
+
+        <activity android:name=".ActivityJump.MainActivityJumpSecond">
+            <intent-filter>
+                <action android:name="com.frog.ui_second" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </activity>
+        <activity android:name=".ActivityJump.MainActivityJumpFirst" />
+        <activity android:name=".MainActivitySignUp" />
 
         <provider
             android:name="cn.bmob.v3.util.BmobContentProvider"
-            android:authorities="com.frog.ui.BmobContentProvider"></provider>
+            android:authorities="com.frog.ui.BmobContentProvider" />
 
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity"/>
         <activity android:name=".MainActivityUserInterface" />
         <activity android:name=".MainActivityProgress" /> <!-- android:theme="@style/AppTheme" -->
         <activity android:name=".MainActivityAlertDialog" />
@@ -39,6 +48,7 @@
         <activity android:name=".MainActivityRadioButton" />
         <activity android:name=".MainActivityEditText" />
         <activity android:name=".MainActivityButton" />
+        <activity android:name=".MainActivityLifeCycle" />
         <activity android:name=".MainActivityWelcome">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

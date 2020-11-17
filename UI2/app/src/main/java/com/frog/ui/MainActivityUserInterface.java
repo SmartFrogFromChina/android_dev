@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.frog.ui.ActivityJump.MainActivityJumpFirst;
+
 public class MainActivityUserInterface extends AppCompatActivity {
 
     private Button btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8;
@@ -45,6 +47,9 @@ public class MainActivityUserInterface extends AppCompatActivity {
         btn8 = findViewById(R.id.btn_toast);
         btn9 = findViewById(R.id.btn_alert_dialog);
         btn10 =findViewById(R.id.btn_progress);
+        btn11 = findViewById(R.id.btn_life_cycle);
+        btn12 = findViewById(R.id.btn_jump);
+
         setListers();
     }
 
@@ -61,6 +66,8 @@ public class MainActivityUserInterface extends AppCompatActivity {
         btn8.setOnClickListener(onClick);
         btn9.setOnClickListener(onClick);
         btn10.setOnClickListener(onClick);
+        btn11.setOnClickListener(onClick);
+        btn12.setOnClickListener(onClick);
     }
 
     class OnClick implements View.OnClickListener{
@@ -101,6 +108,12 @@ public class MainActivityUserInterface extends AppCompatActivity {
                     break;
                 case R.id.btn_progress:
                     intent = new Intent(getApplicationContext(),MainActivityProgress.class);
+                    break;
+                case R.id.btn_life_cycle:
+                    intent = new Intent(getApplicationContext(),MainActivityLifeCycle.class);
+                    break;
+                case R.id.btn_jump:
+                    intent = new Intent(getApplicationContext(), MainActivityJumpFirst.class);
                     break;
             }
             startActivity(intent);

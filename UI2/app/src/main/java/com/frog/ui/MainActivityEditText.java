@@ -52,6 +52,7 @@ public class MainActivityEditText extends AppCompatActivity {
                         if(e == null)
                         {
                             startActivity(new Intent(MainActivityEditText.this,MainActivity.class));
+                            finish();
                         }else
                         {
                             ToastUtil.showMsg(MainActivityEditText.this,"登录失败："+e.getMessage());
@@ -64,6 +65,7 @@ public class MainActivityEditText extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivityEditText.this,MainActivitySignUp.class));
+                finish();
             }
         });
     }

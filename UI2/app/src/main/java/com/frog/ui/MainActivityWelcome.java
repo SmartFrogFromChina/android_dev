@@ -37,7 +37,7 @@ public class MainActivityWelcome extends AppCompatActivity {
             }else{
                 startActivity(new Intent(MainActivityWelcome.this, MainActivity.class));
             }
-
+            finish();
         }
     };
 }

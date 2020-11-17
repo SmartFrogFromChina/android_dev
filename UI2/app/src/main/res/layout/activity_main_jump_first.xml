@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/et_jump_first_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:hint="name"
+        android:maxLines="1"/>
+
+    <EditText
+        android:id="@+id/et_jump_first_age"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="age"
+        android:maxLines="1"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/et_jump_first_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="date"
+        android:maxLines="1"
+        android:layout_marginTop="20dp"/>
+
+
+    <Button
+        android:id="@+id/btn_jump_to_first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="提交到下一个页面"
+        android:textAllCaps="false"
+        android:background="@drawable/btn_press"
+        android:layout_marginTop="200dp"/>
+
+</LinearLayout>
