@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/tv_fragment_water"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="我是水"
+        android:textColor="#ff0000"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:background="#4DB38A"
+        />
+
+    <Button
+        android:id="@+id/btn_switch_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="切换Fragment"
+        android:layout_marginTop="30dp"
+        android:textAllCaps="false"
+        />
+    <Button
+        android:id="@+id/btn_set_fragment_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="改变TextView内容"
+        android:layout_marginTop="30dp"
+        android:textAllCaps="false"
+        />
+
+</LinearLayout>

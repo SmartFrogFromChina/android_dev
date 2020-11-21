@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/et_file_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="输入保存的内容"
+        android:maxLines="1"
+        />
+    <TextView
+        android:id="@+id/tv_file_show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        />
+
+    <Button
+        android:id="@+id/btn_file_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="file内部存储(/data/data/appid/files)之保存"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/btn_file_read"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="file内部存储(/data/data/appid/files)之读取"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/btn_external_file_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="file外部存储(Android/data/appid/files)之保存"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/btn_external_file_read"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="file外部存储(Android/data/appid/files)之读取"
+        android:textAllCaps="false"/>
+    <Button
+        android:id="@+id/btn_downloads_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="file公共目录(Downloads)之保存"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/btn_downloads_read"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="file公共目录(Downloads)之读取"
+        android:textAllCaps="false"/>
+
+</LinearLayout>

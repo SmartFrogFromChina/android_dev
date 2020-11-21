@@ -4,12 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 
 import java.util.Timer;
 import java.util.TimerTask;
 
 import cn.bmob.v3.Bmob;
 import cn.bmob.v3.BmobUser;
+import cn.bmob.v3.update.BmobUpdateAgent;
 
 public class MainActivityWelcome extends AppCompatActivity {
 
@@ -35,6 +37,7 @@ public class MainActivityWelcome extends AppCompatActivity {
             {
                 startActivity(new Intent(MainActivityWelcome.this, MainActivityEditText.class));
             }else{
+
                 startActivity(new Intent(MainActivityWelcome.this, MainActivity.class));
             }
             finish();

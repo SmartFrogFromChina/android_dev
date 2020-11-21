@@ -8,11 +8,14 @@ import android.view.View;
 import android.widget.Button;
 
 import com.frog.ui.ActivityJump.MainActivityJumpFirst;
+import com.frog.ui.broadcast.MainActivityBroadcastMain;
+import com.frog.ui.fragment.MainActivityContainer;
 
 public class MainActivityUserInterface extends AppCompatActivity {
 
     private Button btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8;
-    private Button btn9,btn10,btn11,btn12,btn13;
+    private Button btn9,btn10,btn11,btn12,btn13,btn14,btn15;
+    private Button btn16,btn17;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +52,11 @@ public class MainActivityUserInterface extends AppCompatActivity {
         btn10 =findViewById(R.id.btn_progress);
         btn11 = findViewById(R.id.btn_life_cycle);
         btn12 = findViewById(R.id.btn_jump);
-
+        btn13 = findViewById(R.id.btn_fragment);
+        btn14 = findViewById(R.id.btn_shared_preference);
+        btn15 = findViewById(R.id.btn_file);
+        btn16 = findViewById(R.id.btn_local_broadcast);
+        btn17 = findViewById(R.id.btn_main_property);
         setListers();
     }
 
@@ -68,6 +75,11 @@ public class MainActivityUserInterface extends AppCompatActivity {
         btn10.setOnClickListener(onClick);
         btn11.setOnClickListener(onClick);
         btn12.setOnClickListener(onClick);
+        btn13.setOnClickListener(onClick);
+        btn14.setOnClickListener(onClick);
+        btn15.setOnClickListener(onClick);
+        btn16.setOnClickListener(onClick);
+        btn17.setOnClickListener(onClick);
     }
 
     class OnClick implements View.OnClickListener{
@@ -115,6 +127,22 @@ public class MainActivityUserInterface extends AppCompatActivity {
                 case R.id.btn_jump:
                     intent = new Intent(getApplicationContext(), MainActivityJumpFirst.class);
                     break;
+                case R.id.btn_fragment:
+                    intent = new Intent(getApplicationContext(), MainActivityContainer.class);
+                    break;
+                case R.id.btn_shared_preference:
+                    intent = new Intent(getApplicationContext(), MainActivitySharedPreference.class);
+                    break;
+                case R.id.btn_file:
+                    intent = new Intent(getApplicationContext(), MainActivityFile.class);
+                    break;
+                case R.id.btn_local_broadcast:
+                    intent = new Intent(getApplicationContext(), MainActivityBroadcastMain.class);
+                    break;
+                case R.id.btn_main_property:
+                    intent = new Intent(getApplicationContext(), MainActivityProperty.class);
+                    break;
+
             }
             startActivity(intent);
         }

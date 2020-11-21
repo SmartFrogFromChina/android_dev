@@ -11,6 +11,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import cn.bmob.v3.Bmob;
+import cn.bmob.v3.update.BmobUpdateAgent;
 
 public class MainActivity extends AppCompatActivity {
 
