@@ -3,6 +3,8 @@ package com.frog.ui;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
+import android.app.Activity;
+import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
@@ -10,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.frog.ui.Util.ToastUtil;
 
@@ -27,11 +30,17 @@ public class MainActivityFile extends AppCompatActivity {
     private Button mButtonExternalSave,mButtonExternalRead;
     private Button mButtonCommonSave,mButtonCommonRead;
 
+    public static String[] PERMISSIONS_STORAGE = {
+            "android.permission.READ_EXTERNAL_STORAGE",
+            "android.permission.WRITE_EXTERNAL_STORAGE"};
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_file);
+        verifyStoragePermissions(this);
 
         mTextView = findViewById(R.id.tv_file_show);
         mEditText = findViewById(R.id.et_file_input);
@@ -84,14 +93,14 @@ public class MainActivityFile extends AppCompatActivity {
     {
         FileOutputStream fileOutputStream = null;
         try {
-            File dir = new File(String.valueOf(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)+"/test"));
+            File dir = new File(String.valueOf(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)+"/test2"));
             if(!dir.exists()){
                 dir.mkdir();
             }
             else{
                 ToastUtil.showMsg(getApplicationContext(),"目录已存在"+dir.getAbsolutePath());
             }
-            File file = new File(dir,"1.txt");
+            File file = new File(dir,"2.txt");
             if(!file.exists()){
                 if( file.createNewFile() == true){
                     ToastUtil.showMsg(getApplicationContext(),"创建文件成功");
@@ -124,8 +133,8 @@ public class MainActivityFile extends AppCompatActivity {
         int len = 0;
         try {
             //fileInputStream = openFileInput("1.txt");
-            File dir = new File(String.valueOf(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)+"/test"));
-            File file = new File(dir,"1.txt");
+            File dir = new File(String.valueOf(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)+"/test2"));
+            File file = new File(dir,"2.txt");
             if(!file.exists())
             {
                 ToastUtil.showMsg(getApplicationContext(),"File not exist");
@@ -142,7 +151,8 @@ public class MainActivityFile extends AppCompatActivity {
             e.printStackTrace();
         }finally {
             try {
-                fileInputStream.close();
+                if(fileInputStream != null)
+                    fileInputStream.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -260,6 +270,23 @@ public class MainActivityFile extends AppCompatActivity {
         }
         return null;
     }
-
+    //然后通过一个函数来申请
+    public static void verifyStoragePermissions(Activity activity) {
+        try {
+            //检测是否有写的权限
+            int write_permission = ActivityCompat.checkSelfPermission(activity,
+                    "android.permission.WRITE_EXTERNAL_STORAGE");
+            int read_permission = ActivityCompat.checkSelfPermission(activity,
+                    "android.permission.READ_EXTERNAL_STORAGE");
+            if (write_permission != PackageManager.PERMISSION_GRANTED || read_permission != PackageManager.PERMISSION_GRANTED) {
+                // 没有写的权限，去申请写的权限，会弹出对话框
+                ActivityCompat.requestPermissions(activity, PERMISSIONS_STORAGE, 1);
+            } else {
+                Toast.makeText(activity, "有读写权限", Toast.LENGTH_SHORT).show();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
 }

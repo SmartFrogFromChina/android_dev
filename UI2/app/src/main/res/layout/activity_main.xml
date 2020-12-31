@@ -1,18 +1,196 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+>
+
+<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <Button
+        android:id="@+id/btn_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="5dp"
+        android:text="TextView示例"
+        android:textColor="#0000ff"
+        android:textAllCaps="false"
+        />
 
     <Button
-        android:id="@+id/btn_user_interface"
+        android:id="@+id/button_sample"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="UI"
-        android:layout_marginTop="10dp"/>
+        android:layout_height="40dp"
+        android:layout_margin="5dp"
+        android:text="Button示例"
+        android:textColor="#0000ff"
+        android:textAllCaps="false"
+        />
 
+    <Button
+        android:id="@+id/edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="5dp"
+        android:text="EditText示例"
+        android:textColor="#0000ff"
+        android:textAllCaps="false"/>
 
+    <Button
+        android:id="@+id/radio_button"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="5dp"
+        android:text="RadioButton示例"
+        android:textColor="#0000ff"
+        android:textAllCaps="false"/>
 
+    <Button
+        android:id="@+id/checkbox_button"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="5dp"
+        android:text="CheckBox示例"
+        android:textColor="#0000ff"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/btn_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="5dp"
+        android:text="ImageView示例"
+        android:textColor="#0000ff"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/btn_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="5dp"
+        android:text="ScrollView示例"
+        android:textColor="#0000ff"
+        android:textAllCaps="false"/>
+    <Button
+        android:id="@+id/btn_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="5dp"
+        android:text="RecyclerView示例"
+        android:textColor="#0000ff"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/btn_web_view"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="5dp"
+        android:text="WebView示例"
+        android:textColor="#0000ff"
+        android:textAllCaps="false"/>
+    <Button
+        android:id="@+id/btn_toast"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="5dp"
+        android:text="弹出组件之Toast"
+        android:textColor="#0000ff" />
+
+<Button
+    android:id="@+id/btn_alert_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:text="弹出组件之AlertDialog"
+    android:textAllCaps="false"
+    android:textColor="#0000ff"
+    android:layout_margin="5dp"
+    />
+    <Button
+        android:id="@+id/btn_progress"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="弹出组件之ProgressBar"
+        android:textAllCaps="false"
+        android:textColor="#0000ff"
+        android:layout_margin="5dp"
+        />
+
+    <Button
+        android:id="@+id/btn_life_cycle"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Activity生命周期"
+        android:textAllCaps="false"
+        android:textColor="#0000ff"
+        android:layout_margin="5dp"
+        />
+    <Button
+        android:id="@+id/btn_jump"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Activity跳转"
+        android:textAllCaps="false"
+        android:textColor="#0000ff"
+        android:layout_margin="5dp"
+        />
+    <Button
+        android:id="@+id/btn_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="fragment示例"
+        android:textAllCaps="false"
+        android:textColor="#0000ff"
+        android:layout_margin="5dp"
+        />
+
+    <Button
+        android:id="@+id/btn_shared_preference"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="SharedPreference示例"
+        android:textAllCaps="false"
+        android:textColor="#0000ff"
+        android:layout_margin="5dp"
+        />
+
+    <Button
+        android:id="@+id/btn_file"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="File示例"
+        android:textAllCaps="false"
+        android:textColor="#0000ff"
+        android:layout_margin="5dp"
+        />
+
+    <Button
+        android:id="@+id/btn_local_broadcast"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="LocalBroadcastManger示例"
+        android:textAllCaps="false"
+        android:textColor="#0000ff"
+        android:layout_margin="5dp"
+        />
+    <Button
+        android:id="@+id/btn_main_property"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="属性动画"
+        android:textAllCaps="false"
+        android:textColor="#0000ff"
+        android:layout_margin="5dp"
+        />
+
+    <Button
+        android:id="@+id/btn_aes"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="AES加密解密"
+        android:textAllCaps="false"
+        android:textColor="#0000ff"
+        android:layout_margin="5dp"
+        />
 </LinearLayout>
+</ScrollView>

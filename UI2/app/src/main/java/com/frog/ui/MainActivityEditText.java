@@ -5,14 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.graphics.Paint;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.frog.ui.Util.ToastUtil;
 
@@ -51,10 +47,9 @@ public class MainActivityEditText extends AppCompatActivity {
                     public void done(User user, BmobException e) {
                         if(e == null)
                         {
-                            startActivity(new Intent(MainActivityEditText.this,MainActivity.class));
+                            startActivity(new Intent(MainActivityEditText.this, MainActivity.class));
                             finish();
-                        }else
-                        {
+                        }else {
                             ToastUtil.showMsg(MainActivityEditText.this,"登录失败："+e.getMessage());
                         }
                     }

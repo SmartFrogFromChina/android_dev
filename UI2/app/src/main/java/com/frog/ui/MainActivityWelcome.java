@@ -4,14 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 
 import java.util.Timer;
 import java.util.TimerTask;
 
 import cn.bmob.v3.Bmob;
 import cn.bmob.v3.BmobUser;
-import cn.bmob.v3.update.BmobUpdateAgent;
 
 public class MainActivityWelcome extends AppCompatActivity {
 
@@ -26,7 +24,6 @@ public class MainActivityWelcome extends AppCompatActivity {
 
         //第一：默认初始化
        Bmob.initialize(this, "13b51c4d8260c30d68666900a7b55c50");
-
     }
 
     TimerTask timertask = new TimerTask() {

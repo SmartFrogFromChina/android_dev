@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 public class MainActivityTextView extends AppCompatActivity {
 
-    private TextView text_view,tv3;
+    private TextView text_view,tv3,tv4;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +22,9 @@ public class MainActivityTextView extends AppCompatActivity {
 
         tv3 = findViewById(R.id.tv3);
         tv3.setText(Html.fromHtml("<u>你好啊</u>"));
+
+        tv4 = findViewById(R.id.tv4);
+        tv4.setSelected(true);
     }
 
 

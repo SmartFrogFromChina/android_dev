@@ -43,7 +43,7 @@ public class MainActivitySignUp extends AppCompatActivity {
                         if(e == null)
                         {
                             ToastUtil.showMsg(MainActivitySignUp.this,"注册成功");
-                            startActivity(new Intent(MainActivitySignUp.this,MainActivity.class));
+                            startActivity(new Intent(MainActivitySignUp.this, MainActivity.class));
                             finish();
                         }else{
                             ToastUtil.showMsg(MainActivitySignUp.this,"注册失败"+e.getMessage());
